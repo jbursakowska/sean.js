@@ -63,3 +63,9 @@ create table user_group (
     foreign key (user_id) references user (id),
     foreign key (group_id) references group (id)
 )
+
+create table transactions (
+    id int serial not null,
+    created_time timestamp default now(),
+    description text not null
+)
